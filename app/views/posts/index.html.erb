@@ -1,0 +1,14 @@
+<div class ="container">
+  <h1>Posts</h1>
+
+  <div id="posts">
+    <% @posts.each do |post| %>
+      <%= render post %>
+      <p>
+        <%= link_to "Show post", post, class:"btn btn-info" %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "+ New post", new_post_path, class:"btn btn-dark" %>
+</div>  
